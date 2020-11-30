@@ -1,0 +1,212 @@
+<ng-container>
+    <div [ngSwitch]="NumeroPerfil">
+        <div *ngSwitchCase="1">
+            <div id="nav4" class="row-md-4">
+                <nav class="navbar navbar-expand-lg navbar-light" style="background-color: orange;">
+                    <a class="navbar-brand">
+                        <h4 class="h"><img class="imagen" width="30" heigth="30" src="https://yt3.ggpht.com/a/AATXAJxLlg0gJLzBLLb6l9f-c_yKAiKz3oh62awc6k-M=s100-c-k-c0xffffffff-no-rj-mo"></h4>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarColor01">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active" [routerLink]="['']" routerLinkActive="active">
+                                <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['noticias-semana']" routerLinkActive="active">
+                                <a class="nav-link">Noticias De La Semana</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['nacionales']" routerLinkActive="active">
+                                <a class="nav-link">nacional</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['internacionales']" routerLinkActive="active">
+                                <a class="nav-link">internacional</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['deportes']" routerLinkActive="active">
+                                <a class="nav-link">deportes</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['tecnologia']" routerLinkActive="active">
+                                <a class="nav-link">tecnologia</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['covid']" routerLinkActive="active">
+                                <a class="nav-link">covid-19</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['videos']" routerLinkActive="active">
+                                <a class="nav-link">videos</a>
+                            </li>
+                        </ul>
+                        <!--barra de navegacion-->
+                        <button class="switch mx-4" id="switch" (click)="CambiarFondo()">
+                            <span><i class="fas fa-sun"></i></span>
+                            <span><i class="fas fa-moon"></i></span>
+                        </button>
+
+                        <!--aqui va el nombre del usuario-->
+                        <h4>Bienvenido {{usuario.nick}}!</h4>
+                    </div>
+                    <!--fin de la barra-->
+                </nav>
+            </div>
+        </div>
+
+        <div *ngSwitchCase="2">
+            <div id="nav4" class="row-md-4">
+                <nav class="navbar navbar-expand-lg navbar-light" style="background-color: orange;">
+                    <a class="navbar-brand">
+                        <h4 class="h"><img class="imagen" width="30" heigth="30" src="https://yt3.ggpht.com/a/AATXAJxLlg0gJLzBLLb6l9f-c_yKAiKz3oh62awc6k-M=s100-c-k-c0xffffffff-no-rj-mo"></h4>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarColor01">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active" [routerLink]="['']" routerLinkActive="active">
+                                <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['noticias-semana']" routerLinkActive="active">
+                                <a class="nav-link">Noticias De La Semana</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['nacionales']" routerLinkActive="active">
+                                <a class="nav-link">nacional</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['internacionales']" routerLinkActive="active">
+                                <a class="nav-link">internacional</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['deportes']" routerLinkActive="active">
+                                <a class="nav-link">deportes</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['tecnologia']" routerLinkActive="active">
+                                <a class="nav-link">tecnologia</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['covid']" routerLinkActive="active">
+                                <a class="nav-link">covid-19</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['videos']" routerLinkActive="active">
+                                <a class="nav-link">videos</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['mis-noticias']" routerLinkActive="active">
+                                <a class="nav-link">Mis Noticias</a>
+                            </li>
+                        </ul>
+                        <button class="switch mx-4" id="switch" (click)="CambiarFondo()">
+                            <span><i class="fas fa-sun"></i></span>
+                            <span><i class="fas fa-moon"></i></span>
+                        </button>
+                        <!--aqui va el nombre del usuario-->
+                        <h4>Bienvenido {{usuario.nick}}!</h4>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div *ngSwitchCase="3">
+            <div id="nav4" class="row-md-4">
+                <nav class="navbar navbar-expand-lg navbar-light" style="background-color: orange;">
+                    <a class="navbar-brand">
+                        <h4 class="h"><img class="imagen" width="30" heigth="30" src="https://yt3.ggpht.com/a/AATXAJxLlg0gJLzBLLb6l9f-c_yKAiKz3oh62awc6k-M=s100-c-k-c0xffffffff-no-rj-mo"></h4>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarColor01">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active" [routerLink]="['']" routerLinkActive="active">
+                                <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['noticias-semana']" routerLinkActive="active">
+                                <a class="nav-link">Noticias De La Semana</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['nacionales']" routerLinkActive="active">
+                                <a class="nav-link">nacional</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['internacionales']" routerLinkActive="active">
+                                <a class="nav-link">internacional</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['deportes']" routerLinkActive="active">
+                                <a class="nav-link">deportes</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['tecnologia']" routerLinkActive="active">
+                                <a class="nav-link">tecnologia</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['covid']" routerLinkActive="active">
+                                <a class="nav-link">covid-19</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['videos']" routerLinkActive="active">
+                                <a class="nav-link">videos</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['Admin']" routerLinkActive="active">
+                                <a class="nav-link">Servicios de Administrador</a>
+                            </li>
+                        </ul>
+
+                        <button class="switch mx-4" id="switch" (click)="CambiarFondo()">
+                            <span><i class="fas fa-sun"></i></span>
+                            <span><i class="fas fa-moon"></i></span>
+                        </button>
+
+                        <!--aqui va el nombre del usuario-->
+                        <h4>Bienvenido {{usuario.nick}}!</h4>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div *ngSwitchDefault>
+            <div id="nav4" class="row-md-4">
+                <nav class="navbar navbar-expand-lg navbar-light" style="background-color: orange;">
+                    <a class="navbar-brand">
+                        <h4 class="h"><img class="imagen" width="30" heigth="30" src="https://yt3.ggpht.com/a/AATXAJxLlg0gJLzBLLb6l9f-c_yKAiKz3oh62awc6k-M=s100-c-k-c0xffffffff-no-rj-mo"></h4>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarColor01">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active" [routerLink]="['']" routerLinkActive="active">
+                                <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['noticias-semana']" routerLinkActive="router-link-active" routerLinkActive="active">
+                                <a class="nav-link">Noticias De La Semana</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['nacionales']" routerLinkActive="active">
+                                <a class="nav-link">nacional</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['internacionales']" routerLinkActive="active">
+                                <a class="nav-link">internacional</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['deportes']" routerLinkActive="active">
+                                <a class="nav-link">deportes</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['tecnologia']" routerLinkActive="active">
+                                <a class="nav-link">tecnologia</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['covid']" routerLinkActive="active">
+                                <a class="nav-link">covid-19</a>
+                            </li>
+                            <li class="nav-item" [routerLink]="['videos']" routerLinkActive="active">
+                                <a class="nav-link">videos</a>
+                            </li>
+                        </ul>
+                        <button class="switch mx-4" id="switch" (click)="CambiarFondo()">
+                            <span><i class="fas fa-sun"></i></span>
+                            <span><i class="fas fa-moon"></i></span>
+                        </button>
+
+                        <div class="identificarse" id="identificarse">
+                            <a class="btn btn-primary btnCambioColor" [routerLink]="['login']" routerLinkActive="active" role="button"><i class="fas fa-user mr-3"></i>Identificarse</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</ng-container>

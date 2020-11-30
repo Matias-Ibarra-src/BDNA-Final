@@ -1,0 +1,17 @@
+<ng-container>
+    <div class="row">
+        <div class="col">
+            <form [formGroup]="formComentario">
+                <h3>Let´s Comment {{user.nick}}!</h3>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Comentario</label>
+                    <textarea formControlName="Comentario" class="form-control" id="comentario" rows="5"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary" (click)="ComentarioNuevo()">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</ng-container>

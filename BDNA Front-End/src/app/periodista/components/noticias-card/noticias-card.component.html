@@ -1,0 +1,21 @@
+<ng-container *ngIf="miasTarjeta">
+    <div class="card mb-3" style="cursor: pointer;">
+        <div class="row no-gutters">
+            <div class="col md-4">
+                <img src="{{miasTarjeta.imgUrl}}" class="card-img" alt="...">
+            </div>
+            <div class="col-10 ">
+                <div class="card-body">
+                    <h5 class="card-title" class="font-weight-bold">{{miasTarjeta.titulo}}</h5>
+                    <p class="card-text" class="font-italic">{{miasTarjeta.resumen}}</p>
+                    <p class="card-text"><small class="text-muted">{{miasTarjeta.fecha}}</small></p>
+                    <p>Estado de La Noticia: {{miasTarjeta.estado}}</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-link" [routerLink]="['modificar', miasTarjeta._id]">Modificar Noticia</button>
+            <button type="button" class="btn btn-link" (click)="EliminarNoticia(miasTarjeta._id)">Eliminar Noticia</button>
+        </div>
+    </div>
+</ng-container>

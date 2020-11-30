@@ -1,0 +1,33 @@
+<div class="containerfluid">
+    <div class="row mt-5">
+        <div class="col">
+            <div class="d-flex justify-content-center h-150">
+                <div class="card" id="login">
+                    <div class="card-header">
+                        <h3>Inicio de Sesion</h3>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="LoginFormGroup">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input formControlName="Email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <small id="emailHelp" class="form-text text-muted">Mantendremos tu información segura siempre</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Contraseña</label>
+                                <input formControlName="Password" type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <ng-container *ngIf="usuarios$ | async;   let users">
+                                <button type="submit" class="btn btn-primary" (click)="ComprobarUsuario(users)">Entrar</button>
+                            </ng-container>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <div class="col d-flex justify-content-center">
+                            <button type="button" class="btn btn-link" [routerLink]="['registro']">Registrarse</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

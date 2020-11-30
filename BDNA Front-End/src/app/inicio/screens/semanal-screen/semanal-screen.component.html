@@ -1,0 +1,42 @@
+<ng-container>
+    <div *ngIf="usuario;else loggedout">
+        <div class="container">
+            <h1 class="mt-5">"Resumen De La Semana"</h1>
+            <div class="row mt-5">
+                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-12">
+                    <div class="col-10 my-3 offset-1" *ngFor="let noticia of (noticias$ | async)">
+                        <ng-template [ngIf]="noticia.mostraren == 3">
+                            <div *ngIf="noticia.estado === 'Publica'">
+                                <app-semanal-card [semanaTarjeta]="noticia"></app-semanal-card>
+                            </div>
+                        </ng-template>
+                    </div>
+                    <!--col-->
+                </div>
+            </div>
+            <!--row-->
+        </div>
+        <!--container-->
+    </div>
+    <ng-template #loggedout>
+        <div class="container">
+            <h1 class="mt-5">"Resumen De La Semana"</h1>
+            <div class="row mt-5">
+                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-12">
+                    <div class="col-10 my-3 offset-1" *ngFor="let noticia of (noticias$ | async)">
+                        <ng-template [ngIf]="noticia.mostraren == 3">
+                            <div *ngIf="noticia.estado === 'Publica'">
+                                <div *ngIf="!noticia.privada">
+                                    <app-semanal-card [semanaTarjeta]="noticia"></app-semanal-card>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </div>
+                    <!--col-->
+                </div>
+            </div>
+            <!--row-->
+        </div>
+        <!--container-->
+    </ng-template>
+</ng-container>

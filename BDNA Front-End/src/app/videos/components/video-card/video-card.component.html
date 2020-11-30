@@ -1,0 +1,12 @@
+<div class="delimitador">
+    <div class="contenedor" class="my-4" style="text-align: center;" *ngFor="let video of Videos">
+        <h5 class="card-text my-4">{{video.titulo}}</h5>
+        <p>
+            <iframe height="315" [src]="getVideo(video.videoUrl)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
+        <div class="card-body">
+            <p class="card-text">Descripción: {{video.descripcion}}</p>
+            <p class="card-text"><small class="text-muted">{{video.fecha}}</small></p>
+        </div>
+    </div>
+</div>

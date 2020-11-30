@@ -1,0 +1,18 @@
+<ng-container>
+    <div class="row">
+        <div class="col">
+            <ul class="list-group" *ngFor="let comentario of comentarios">
+                <ng-template [ngIf]="comentario.id_asociado == idNoticia">
+                    <li class="list-group-item">
+                        <ul>
+                            Autor:{{comentario.autor}}
+                        </ul>
+                        <ul>
+                            Comenta: {{comentario.comentario}}
+                        </ul>
+                    </li>
+                </ng-template>
+            </ul>
+        </div>
+    </div>
+</ng-container>

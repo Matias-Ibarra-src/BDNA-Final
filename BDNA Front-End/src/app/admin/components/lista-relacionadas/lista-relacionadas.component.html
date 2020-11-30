@@ -1,0 +1,44 @@
+<ng-container>
+    <div class="row">
+        <div class="col">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1" class=""></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2" class=""></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" [routerLink]="['/detalle', noticia1._id]">
+                        <img src="{{noticia1.imgUrl}}" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>{{noticia1.titulo}}</h5>
+                            <p>{{noticia1.resumen}}</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" [routerLink]="['/detalle', noticia2._id]">
+                        <img src="{{noticia2.imgUrl}}" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>{{noticia2.titulo}}</h5>
+                            <p>{{noticia2.resumen}}</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" [routerLink]="['/detalle', noticia3._id]">
+                        <img src="{{noticia3.imgUrl}}" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>{{noticia3.titulo}}</h5>
+                            <p>{{noticia3.resumen}}</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</ng-container>

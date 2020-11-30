@@ -1,0 +1,11 @@
+<ng-container *ngIf="noticiaTarjeta">
+    <div class="card my-4 shadow-sm" style="max-width: fit-content;" style="cursor: pointer;" [routerLink]="['/detalle', noticiaTarjeta._id]">
+        <img src="{{noticiaTarjeta.imgUrl}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title" class="font-weight-bold">{{noticiaTarjeta.titulo}}</h5>
+            <p class="card-text" class="font-italic">{{noticiaTarjeta.resumen}}</p>
+            <p>Autor: {{noticiaTarjeta.autor}}</p>
+            <p>Fecha: {{noticiaTarjeta.fecha}}</p>
+        </div>
+    </div>
+</ng-container>

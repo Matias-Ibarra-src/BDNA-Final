@@ -1,0 +1,34 @@
+<ng-container>
+    <div *ngIf="usuario;else loggedout">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-9">
+                    <div class="col-10 offset-1" *ngFor="let noticia of (noticias$ | async)">
+                        <ng-template [ngIf]="noticia.categoria == 'tecnología'">
+                            <div *ngIf="noticia.estado === 'Publica'">
+                                <app-inicio-card [noticiaTarjeta]='noticia'></app-inicio-card>
+                            </div>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #loggedout>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-9">
+                    <div class="col-10 offset-1" *ngFor="let noticia of (noticias$ | async)">
+                        <ng-template [ngIf]="noticia.categoria == 'tecnología'">
+                            <div *ngIf="noticia.estado === 'Publica'">
+                                <div *ngIf="!noticia.privada">
+                                    <app-inicio-card [noticiaTarjeta]='noticia'></app-inicio-card>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</ng-container>

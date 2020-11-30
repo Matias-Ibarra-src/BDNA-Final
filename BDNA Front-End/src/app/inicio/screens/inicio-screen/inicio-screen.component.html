@@ -1,0 +1,92 @@
+<ng-container>
+    <div *ngIf="usuario;else loggedout">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-3">
+                    <app-clock></app-clock>
+                    <app-weather></app-weather>
+                    <app-conversor></app-conversor>
+                    <div class="card">
+                        <h5 class="card-header">Reclamos</h5>
+                        <div class="card-body">
+                            <p class="card-text">Tu opinion simpre es importante</p>
+                            <a class="btn btn-primary btnCambioColor" href="" role="button" [routerLink]="['reclamo']">Reclamos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-6">
+                    <h1 class="my-3">"Las Mejores Noticias"</h1>
+                    <div class="col-10 offset-1" *ngFor="let noticia  of (noticias$ | async)">
+                        <div *ngIf="noticia.mostraren === 1">
+                            <div *ngIf="noticia.estado === 'Publica'">
+                                <app-inicio-card [noticiaTarjeta]='noticia'></app-inicio-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--col6-->
+                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-3">
+                    <h3 class="my-3">"Noti Noticias Flash"</h3>
+                    <div class="mb-5" *ngFor="let noticia of (noticias$ | async)">
+                        <div *ngIf="noticia.mostraren === 2">
+                            <div *ngIf="noticia.estado === 'Publica'">
+                                <app-small-card [tarjetaPeque]='noticia'></app-small-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--col4-->
+            </div>
+            <!--row-->
+        </div>
+        <!--container-->
+    </div>
+    <ng-template #loggedout>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-3">
+                    <app-clock></app-clock>
+                    <app-weather></app-weather>
+                    <app-conversor></app-conversor>
+                    <div class="card">
+                        <h5 class="card-header">Reclamos</h5>
+                        <div class="card-body">
+                            <p class="card-text">Tu opinion simpre es importante</p>
+                            <a class="btn btn-primary btnCambioColor" href="" role="button" [routerLink]="['reclamo']">Reclamos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-6">
+                    <h1 class="my-3">"Las Mejores Noticias"</h1>
+                    <div class="col-10 offset-1" *ngFor="let noticia  of (noticias$ | async)">
+                        <div *ngIf="noticia.mostraren === 1">
+                            <div *ngIf="noticia.estado === 'Publica'">
+                                <div *ngIf="!noticia.privada">
+                                    <app-inicio-card [noticiaTarjeta]='noticia'></app-inicio-card>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--col6-->
+                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-3">
+                    <h3 class="my-3">"Noti Noticias Flash"</h3>
+                    <div class="mb-5" *ngFor="let noticia of (noticias$ | async)">
+                        <div *ngIf="noticia.mostraren === 2">
+                            <div *ngIf="noticia.estado === 'Publica'">
+                                <div *ngIf="!noticia.privada">
+                                    <app-small-card [tarjetaPeque]='noticia'></app-small-card>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--col4-->
+            </div>
+            <!--row-->
+        </div>
+        <!--container-->
+    </ng-template>
+</ng-container>

@@ -1,0 +1,18 @@
+<div class="container">
+    <h1 class="mt-5 offset-2">"Mis Noticias"</h1>
+    <div class="row mt-5">
+        <div class="crear col d-flex justify-content-center" id="crear">
+            <a class="btn btn-primary btnCambioColor" [routerLink]="['crear']" routerLinkActive="active" role="button">Crear Noticia</a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-8 col-lg-12">
+            <div class="col-10 my-3 offset-1" *ngFor="let noti of (noticias$ | async)">
+                <div *ngIf="noti.autor === user.nick">
+                    <app-noticias-card [miasTarjeta]="noti"></app-noticias-card>
+                </div>
+            </div>
+            <!--col-->
+        </div>
+    </div>
+    <!--row-->
+</div>
+<!--container-->

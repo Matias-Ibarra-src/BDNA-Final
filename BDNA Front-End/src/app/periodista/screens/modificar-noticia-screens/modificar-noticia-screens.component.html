@@ -1,0 +1,44 @@
+<div class="row" *ngIf="(noticia$ | async); let noticia">
+    <div class="col-10 offset-1 mx-5 mt-5">
+        <form [formGroup]="ModiNoticiaForm">
+            <div class="form-group">
+                <label for="FormControl1" id="titulo">Titulo De La Noticia</label>
+                <input formControlName="titulo" type="text" class="form-control w-25 p-3" id="Titulo" placeholder="{{noticia.titulo}}">
+            </div>
+
+            <div class="form-group">
+                <label for="FormControl1" id="imagen">Agrega Un Link de Imagen</label>
+                <input formControlName="img" type="text" class="form-control w-25 p-3 " id="Imagen" placeholder="{{noticia.imgUrl}}">
+            </div>
+
+            <div class="form-group">
+                <label for="FormControl1" id="video">Agrega Un Link de Video (opcional)</label>
+                <input formControlName="video" type="text" class="form-control w-25 p-3 " id="Video" placeholder="{{noticia.VideoUrl}}">
+            </div>
+
+            <P>Categoria: "{{noticia.categoria}}"</P>
+            <p>Su noticia se esta mostrando en: {{noticia.mostraren}}</p>
+
+            <div class="form-group">
+                <label for="Select">Donde Quieres que se Muestre tu Noticia</label>
+                <select formControlName="mostrar" class="form-control w-25 p-3" id="mostrar">
+                <option>Inicio</option>
+                <option>Noticias Pequeñas</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Textarea" id="textareaResumen">Resumen de la Noticia</label>
+                <textarea formControlName="resumen" class="form-control" id="TextareaResumen" rows="5" placeholder="{{noticia.resumen}}"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="Textarea1" id="textareaContenido">Contenido de la Noticia</label>
+                <textarea formControlName="cuerpo" class="form-control" id="TextareaContenido" rows="5" placeholder="{{noticia.cuerpo}}"></textarea>
+            </div>
+            <div *ngIf="(noticias$|async); let notis">
+                <button type="submit" id="btnCrear" class="btn btn-primary float-right" (click)="ModificarNoticia(noticia, notis)">Modificar Noticia</button>
+            </div>
+        </form>
+    </div>
+</div>

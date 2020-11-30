@@ -1,0 +1,15 @@
+<ng-container>
+    <div class="row">
+        <div class="col">
+            <div class="card border-info mb-3">
+                <div class="card-header">Id De Comentario: {{Comentario._id}}</div>
+                <div class="card-body text-info">
+                    <h5 class="card-title">Id Noticia Ascociada: {{Comentario.id_asociado}}</h5>
+                    <p class="card-text">Autor Del Comentario: {{Comentario.autor}}</p>
+                    <p class="card-text">Contenido: {{Comentario.comentario}}</p>
+                    <button type="submit" id="btnEliminar" class="btn btn-primary float-right" (click)="ElminarComentario(Comentario._id)">Eliminar Comentario</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>

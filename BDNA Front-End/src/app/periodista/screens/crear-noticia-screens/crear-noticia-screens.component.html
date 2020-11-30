@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-10 offset-1 mx-5 mt-5">
+        <form [formGroup]="FormNoticia">
+            <div class="form-group">
+                <label for="FormControl1" id="titulo">Titulo De La Noticia</label>
+                <input formControlName="titulo" type="text" class="form-control w-75 p-3" id="Titulo" placeholder="Titulo">
+            </div>
+
+            <div class="form-group">
+                <label for="FormControl1" id="imagen">Agrega Un Link de Imagen</label>
+                <input formControlName="img" type="text" class="form-control w-75 p-3 " id="Imagen" placeholder="Imagen">
+            </div>
+
+            <div class="form-group">
+                <label for="FormControl1" id="video">Agrega Un Link de Video (opcional)</label>
+                <input formControlName="video" type="text" class="form-control w-75 p-3 " id="Video" placeholder="Video">
+            </div>
+
+            <div class="form-group">
+                <label for="Select">Categoria</label>
+                <select formControlName="categoria" class="form-control w-25 p-3" id="Categoria">
+                <option>Nacional</option>
+                <option>Internacional</option>
+                <option>Deporte</option>
+                <option>Tecnologia</option>
+                <option>COVID</option>
+                </select>
+            </div>
+
+            <div class="row align-items-center remember">
+                <input formControlName="Private" type="checkbox" id="es_periodista">¿Quieres que tu noticia sea privada?
+            </div>
+
+            <div class="form-group">
+                <label for="Select">Donde Quieres que se Muestre tu Noticia</label>
+                <select formControlName="mostrar" class="form-control w-25 p-3" id="mostrar">
+                <option>Inicio</option>
+                <option>Noticias Pequeñas</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Textarea" id="textareaResumen">Resumen de la Noticia</label>
+                <textarea formControlName="resumen" class="form-control" id="TextareaResumen" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="Textarea1" id="textareaContenido">Contenido de la Noticia</label>
+                <textarea formControlName="cuerpo" class="form-control" id="TextareaContenido" rows="5"></textarea>
+            </div>
+        </form>
+        <div *ngIf="(noticias$|async); let notis">
+            <button type="submit" id="btnCrear" class="btn btn-primary float-right" (click)="CrearNoticia(notis)">Subir Noticia</button>
+        </div>
+    </div>
+</div>

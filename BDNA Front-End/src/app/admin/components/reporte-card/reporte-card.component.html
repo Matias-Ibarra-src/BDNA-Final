@@ -1,0 +1,47 @@
+<ng-container>
+    <div class="row">
+        <div class="col" [ngSwitch]="tipo">
+            <div *ngSwitchCase="1">
+                <div class="card text-white bg-danger mb-3">
+                    <div class="card-header">Id Reclamo: {{reporte._id}}</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Email asociado: {{reporte.Email_asociado}}</h5>
+                        <p class="card-text">Estado del reporte {{reporte.Estado}}</p>
+                        <p class="card-text">Contenido: {{reporte.Reclamo}}</p>
+                    </div>
+                </div>
+            </div>
+            <div *ngSwitchCase="2">
+                <div class="card text-white bg-info mb-3">
+                    <div class="card-header">Id Opinion: {{reporte._id}}</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Email asociado: {{reporte.Email_asociado}}</h5>
+                        <p class="card-text">Estado del reporte {{reporte.Estado}}</p>
+                        <p class="card-text">Contenido: {{reporte.Reclamo}}</p>
+                    </div>
+                </div>
+            </div>
+            <div *ngSwitchCase="3">
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-header">Id Consulta: {{reporte._id}}</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Email asociado: {{reporte.Email_asociado}}</h5>
+                        <p class="card-text">Estado del reporte {{reporte.Estado}}</p>
+                        <p class="card-text">Contenido: {{reporte.Reclamo}}</p>
+                    </div>
+                </div>
+            </div>
+            <div *ngSwitchCase="4">
+
+                <div class="card text-white bg-warning mb-3">
+                    <div class="card-header">Id Sugerencia: {{reporte._id}}</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Email asociado: {{reporte.Email_asociado}}</h5>
+                        <p class="card-text">Estado del reporte {{reporte.Estado}}</p>
+                        <p class="card-text">Contenido: {{reporte.Reclamo}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>

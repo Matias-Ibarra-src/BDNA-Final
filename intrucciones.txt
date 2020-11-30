@@ -1,0 +1,20 @@
+la base de datos es mongodb y esta conectada directamente al back-end con la uri, esta configurado el cluster para recibir peticiones desde cualquier ip, por lo que debe funcionar solo ejecutando el comando "npm run dev" en el back-end.
+
+para lanzar la aplicacion de angular se debe iniciar el back-end primeramente y despues ejecutar el comando "npm start" en la terminal del front-end.
+
+pd: al iniciar cualquier tipo de usuario en la app no podia hacer que se recargara sola la app asi que hay que recargar la pagina de inicio una vez iniciada la sesion.
+
+pd2: los usuarios de prueba son: 
+	-Correo: matias.ibarra.e@mail.pucv.cl
+	-Contraseña: user1
+	-Rol: Usuario
+
+	-Correo: MatyPrueba1@gmail.com
+	-Contraseña: usuario1
+	-Rol: Periodista
+
+	-Correo: matyas19981998@gmail.com
+	-Contraseña: user
+	-Rol: Admin
+
+pd3: adjunto noticias para que no tenga que buscar.

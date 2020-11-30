@@ -1,0 +1,34 @@
+<ng-container>
+    <div class="row">
+        <div class="col">
+            <div class="card mb-3" [routerLink]="['/detalle', noticia._id]">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="{{noticia.imgUrl}}" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{noticia.titulo}}</h5>
+                            <p class="card-text">{{noticia.resumen}}</p>
+                            <p class="card-text">{{noticia.autor}}</p>
+                            <p class="card-text"><small class="text-muted">{{noticia.fecha}}</small></p>
+                            <p class="card-text">Estado Actual: {{noticia.estado}}</p>
+                            <button type="submit" id="btnEliminar" class="btn btn-primary float-right" (click)="ModificarEstado()">modificar estado</button>
+                            <form [formGroup]="FormEstado">
+                                <div class="form-group">
+                                    <label for="Select">Estado</label>
+                                    <select formControlName="Estado" class="form-control w-25" id="Estado">
+                                        <option>En edición</option>
+                                        <option>Aprobacion</option>
+                                        <option>Publica</option>
+                                    </select>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>

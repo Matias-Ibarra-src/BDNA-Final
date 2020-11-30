@@ -1,0 +1,11 @@
+<ng-container>
+
+    <div class="row mt-5">
+        <div class="col-10 offset-1">
+            <h1>"Noticias"</h1>
+            <div *ngFor="let noticia of (Noticias$|async)">
+                <app-noticia-card [noticia]="noticia"></app-noticia-card>
+            </div>
+        </div>
+    </div>
+</ng-container>

@@ -1,0 +1,10 @@
+<ng-container>
+    <div class="row mt-5">
+        <div class="col-10 offset-1">
+            <h1>"Usuarios"</h1>
+            <div *ngFor="let user  of (Usuarios$ | async)">
+                <app-usuario-card [usuario]="user"></app-usuario-card>
+            </div>
+        </div>
+    </div>
+</ng-container>
